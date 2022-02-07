@@ -65,6 +65,10 @@ for i in range(0,1000):
     if i % 2 == 0:
      if i % 5 == 0:
       if i % 9 == 0:
-          print(i)
+          if i % 13 == 0:
+              for x in range(10):
+                  if x%3==0:
+                    print(i)
+                    print(x)
     # else: i % 3 == 2
     # print(i)
