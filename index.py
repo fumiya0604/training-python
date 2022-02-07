@@ -18,15 +18,15 @@ num = 1
 #for i in range(10):
     #print(i)
 
-# for i in range(10):
-#     num = i+1
-#     tmp = []
-#     for j in range (num):
-#         if num % (j+1) ==0:
-#             tmp.append(num)
-#             print(tmp)
-#     if len(tmp) == 2:
-#         print(num)
+for i in range(10):
+    num = i+1
+    tmp = []
+    for j in range (num):
+        if num % (j+1) ==0:
+            tmp.append(num)
+            print(tmp)
+    if len(tmp) == 2:
+        print(num)
 
 
 
@@ -37,15 +37,15 @@ num = 1
 #     else:
 #          print(num)
 
-def add(x,y):
-    return x*y+x/y
+# def add(x,y):
+#     return x+y
 
 
-res = add(3,5)
-print(res)
+# res = add(3,5)
+# print(res)
 
-rig = add(12,8)
-print(rig)
+# rig = add(12,8)
+# print(rig)
 
 # nn = "abcdefg"
 # print(nn.replace('a','b'))
