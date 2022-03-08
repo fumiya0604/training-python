@@ -46,28 +46,75 @@
 
 # ディクショナリ　　要素に対してキーを持っている
 # 変数 = {キー1:値,キー2:値,キー3:値・・・}
-name = {'石田':'光成','織田':'信長','柴田':'勝家'}
-print(name)
-print(name['石田'])
-print(name['柴田'])
-# 要素の追加・変更・削除
-name ['豊臣'] = '秀吉'  #キーがすでにない場合はディクショナリに追加される
-name ['織田'] = '信成'  #キーがすでにある場合はディクショナリに変更される
-print(name)
-# 削除する場合は最初にdelをつけ削除したい要素のキーを入れる
-del name ['豊臣']
-print(name)
+# name = {'石田':'光成','織田':'信長','柴田':'勝家'}
+# print(name)
+# print(name['石田'])
+# print(name['柴田'])
+# # 要素の追加・変更・削除
+# name ['豊臣'] = '秀吉'  #キーがすでにない場合はディクショナリに追加される
+# name ['織田'] = '信成'  #キーがすでにある場合はディクショナリに変更される
+# print(name)
+# # 削除する場合は最初にdelをつけ削除したい要素のキーを入れる
+# del name ['豊臣']
+# print(name)
 
-# タプルとセット
-# タプルは()で定義するが要素の追加・変更・削除はできない
-# タプルは追加・変更・削除ができないため書き換える必要のないデータを管理また書き換えられていないことを保証できる
-aaa = ('yoru','shimo')
-bbb = (300,55,45,100)
-print(aaa)
-print('要素数は{}'.format(len(aaa)))
-print('合計は{}'.format(sum(bbb)))
-print(type(aaa))　#print(type)でしっかりtupleになっているか確認
-print(type(bbb))
+# # タプルとセット
+# # タプルは()で定義するが要素の追加・変更・削除はできない
+# # タプルは追加・変更・削除ができないため書き換える必要のないデータを管理また書き換えられていないことを保証できる
+# aaa = ('yoru','shimo')
+# bbb = (300,55,45,100)
+# print(aaa)
+# print('要素数は{}'.format(len(aaa)))
+# print('合計は{}'.format(sum(bbb)))
+# print(type(aaa))　#print(type)でしっかりtupleになっているか確認
+# print(type(bbb))
 # セットは重複せず順序もなくキーや添え字もない　appendの代わりにaddを使って要素の追加を行う
 # セットは種類の管理に向いている
 
+# 条件分岐　if else elif true false
+
+# if文
+clase_tal = int(50+63+71+66+59+47+31+73+87+90)
+print(clase_tal)
+scor_target = int(input('目標点数を入力してください>>'))
+scor_res    = int(input('結果の点数を入力してください>>'))
+clase_avg   = int((clase_tal+scor_res)/11)
+print(clase_avg)
+
+if scor_res < 0 or scor_res > 100:
+    print('異常な点数です')
+    print('入力し直してください')
+elif scor_res >= 40:
+    print('赤点回避おめでとう！')
+    if clase_avg <= scor_res:
+        print('クラス平均より高いですね！')
+else:
+    print('残念ながら赤点です')
+    print('補習を受けてください')  
+
+# if clase_avg < scor_res:
+#     print('よく頑張りました')
+# else:
+#     clase_avg > scor_res
+#     print('もっと頑張りましょう')
+
+
+
+# print('すべての質問にyまたはnで答えてください')
+# okane_aruka = input('お金に余裕はあるか>>')
+# if okane_aruka == 'y':
+#     onaka_suiteruka = input('お腹が空いているか>>')
+#     nomitai_kibun = input('ビール飲みたい？>>')
+#     if onaka_suiteruka == 'y' and nomitai_kibun == 'y':
+#         print('焼肉はいかが？')
+#     elif onaka_suiteruka == 'y':
+#         print('カレーはいかが？')
+#     elif nomitai_kibun == 'y':
+#         print('焼き鳥はいかが？')
+#     else:
+#         print('パスタはいかが？')
+#     yashoku_iruka = input('夜食は必要？>>')
+#     if yashoku_iruka == 'y':
+#         print('コンビニチキンはいかが？')
+# else:
+#     print('家で食べましょう')
