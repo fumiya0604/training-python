@@ -74,31 +74,71 @@
 # 条件分岐　if else elif true false
 
 # if文
-clase_tal = int(50+63+71+66+59+47+31+73+87+90)
-print(clase_tal)
-scor_target = int(input('目標点数を入力してください>>'))
-scor_res    = int(input('結果の点数を入力してください>>'))
-clase_avg   = int((clase_tal+scor_res)/11)
-print(clase_avg)
+# clase_tal = int(50+63+71+66+59+47+31+73+87+90)
+# print(clase_tal)
+# scor_target = int(input('目標点数を入力してください>>'))
+# scor_res    = int(input('結果の点数を入力してください>>'))
+# clase_avg   = int((clase_tal+scor_res)/11)
+# print(clase_avg)
 
-if scor_res < 0 or scor_res > 100:
-    print('異常な点数です')
-    print('入力し直してください')
-elif scor_res >= 40:
-    print('赤点回避おめでとう！')
-    if clase_avg <= scor_res:
-        print('クラス平均より高いですね！')
-else:
-    print('残念ながら赤点です')
-    print('補習を受けてください')  
+# if scor_res < 0 or scor_res > 100:
+#     print('異常な点数です')
+#     print('入力し直してください')
+# elif scor_res >= 40:
+#     print('赤点回避おめでとう！')
+#     if clase_avg <= scor_res:
+#         print('クラス平均より高いですね！')
+# else:
+#     print('残念ながら赤点です')
+#     print('補習を受けてください')  
 
+# while文
+# count = 0
+# while count < 20:
+#     count += 1
+#     print('羊が{}匹'.format(count))
+# print('おやすみなさい')
+
+# is_awake = true
+# count = 0
+# while is_awake == true:
+#     count += 1
+#     print('羊が{}匹'.format(count))
+#     key = input('もう眠りそうですか？(y/n)>>')
+#     if key == 'y':
+#         is_awake = false
+# print('おやすみなさい')
 # if clase_avg < scor_res:
 #     print('よく頑張りました')
 # else:
 #     clase_avg > scor_res
 #     print('もっと頑張りましょう')
 
+# count = 0
+# student_num = int(input('学生の数を入力>>'))
+# score_list = list()
+# while count < student_num:
+#     count += 1
+#     score = int(input('{}人目の得点を入力>>'.format(count)))
+#     score_list.append(score)
+# print(score_list)
+# total = sum(score_list)
+# print('平均点は{}です'.format(total/student_num))
 
+scores = [50,20,60,80,96]
+# count = 0
+# while count < len(scores):
+#     if scores[count] >= 60:
+#         print('OK')
+#     else:
+#         print('NO')
+#     count += 1
+
+# 繰り返しを使ったリストの参照のやり方
+# カウンタ変数　= 0
+# while カウンタ変数 < len(リスト):
+#   リスト[カウンタ変数]を使った処理
+#   カウンタ変数 += 1
 
 # print('すべての質問にyまたはnで答えてください')
 # okane_aruka = input('お金に余裕はあるか>>')
@@ -118,3 +158,55 @@ else:
 #         print('コンビニチキンはいかが？')
 # else:
 #     print('家で食べましょう')
+
+# for文　繰り返し
+for data in scores:
+    if data >= 60:
+        print('OK')
+    else:
+        print('NO')
+
+# # for文でリストの全要素を参照す
+# for 変数　in リスト:
+#     繰り返し処理
+
+for x in range(3):
+    print(10*2)
+
+# range関数　決まった回数ループを回す
+# for 変数 in range(回したい回数):
+#     繰り返し処理
+
+# while文とfor文の使い分け
+# while文・繰り返す回数の目処が立たないときに使う
+# for　文・繰り返す回数の目処が立つときに使う
+
+# 繰り返しの制御
+ages = [10,20,23,25,28,51,77,8,3,30]
+num = 5
+samples = list()
+for age in ages:
+    if 24 <= age <= 30:
+        if len(samples) < num:
+            samples.append(age)
+print(samples)
+
+sample = list()
+for data in ages:
+    if 0 <= data < 30:
+        sample.append(data)
+        if len(sample) == num:
+            break
+print(sample)
+
+agess = [10,20,23,25,'ひみつ',28,51,77,8,3,30,'無回答']
+samp = list()
+for data in agess:
+    if not isinstance(data,int):
+        continue
+    if data < 20 or data >= 30:
+        continue
+    samp.append(data)
+print(samp)
+
+
