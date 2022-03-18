@@ -125,7 +125,7 @@
 # total = sum(score_list)
 # print('平均点は{}です'.format(total/student_num))
 
-scores = [50,20,60,80,96]
+# scores = [50,20,60,80,96]
 # count = 0
 # while count < len(scores):
 #     if scores[count] >= 60:
@@ -134,11 +134,11 @@ scores = [50,20,60,80,96]
 #         print('NO')
 #     count += 1
 
-# 繰り返しを使ったリストの参照のやり方
-# カウンタ変数　= 0
-# while カウンタ変数 < len(リスト):
-#   リスト[カウンタ変数]を使った処理
-#   カウンタ変数 += 1
+# # 繰り返しを使ったリストの参照のやり方
+# # カウンタ変数　= 0
+# # while カウンタ変数 < len(リスト):
+# #   リスト[カウンタ変数]を使った処理
+# #   カウンタ変数 += 1
 
 # print('すべての質問にyまたはnで答えてください')
 # okane_aruka = input('お金に余裕はあるか>>')
@@ -160,18 +160,18 @@ scores = [50,20,60,80,96]
 #     print('家で食べましょう')
 
 # for文　繰り返し
-for data in scores:
-    if data >= 60:
-        print('OK')
-    else:
-        print('NO')
+# for data in scores:
+#     if data >= 60:
+#         print('OK')
+#     else:
+#         print('NO')
 
 # # for文でリストの全要素を参照す
 # for 変数　in リスト:
 #     繰り返し処理
 
-for x in range(3):
-    print(10*2)
+# for x in range(3):
+#     print(10*2)
 
 # range関数　決まった回数ループを回す
 # for 変数 in range(回したい回数):
@@ -182,31 +182,62 @@ for x in range(3):
 # for　文・繰り返す回数の目処が立つときに使う
 
 # 繰り返しの制御
-ages = [10,20,23,25,28,51,77,8,3,30]
-num = 5
-samples = list()
+ages = [10,20,23,25,28,51,77,8,3,30,10,20,23,25,28,51,77,8,3,30]
+num = 10
+samples = []
 for age in ages:
-    if 24 <= age <= 30:
-        if len(samples) < num:
-            samples.append(age)
+    if (10 <= age <= 50) or len(samples) < num:
+        samples.append(age)
 print(samples)
 
-sample = list()
-for data in ages:
-    if 0 <= data < 30:
-        sample.append(data)
-        if len(sample) == num:
-            break
-print(sample)
+# sample = list()
+# for data in ages:
+#     if 0 <= data < 30:
+#         sample.append(data)
+#         if len(sample) == num:
+#             break
+# print(sample)
 
-agess = [10,20,23,25,'ひみつ',28,51,77,8,3,30,'無回答']
-samp = list()
-for data in agess:
-    if not isinstance(data,int):
-        continue
-    if data < 20 or data >= 30:
-        continue
-    samp.append(data)
-print(samp)
+# agess = [10,20,23,25,'ひみつ',28,51,77,8,3,30,'無回答']
+# samp = list()
+# for data in agess:
+#     if not isinstance(data,int):
+#         continue
+#     if data < 20 or data >= 30:
+#         continue
+#     samp.append(data)
+# print(samp)
 
+# def input_scores(ふみや):
+#     print('{}')
+# fumi_scores = input_scores('ふみや')
+# hiro_scores = input_scores('ひろと')
+# fumi_avg = calc_average(fumi_scores)
+# hiro_avg = calc_average(hiro_scores)
+# output_result('ふみや',fumi_avg)
+# output_result('ひろと',hiro_avg)
 
+# def add(a, b):
+#     x = a + b
+#     return x
+# x = add(3, 4)
+# print(x)
+# # 7
+
+class Hero:
+    name = "fumi"
+    hp   = 100
+    mp   = 50
+    def sleep(self,hours):
+        """
+        
+        """
+        print("{}は{}時間寝た！".format(self.name,hours))
+        self.hp += hours
+        self.mp += hours
+
+print("ファンタジー")
+h = Hero()
+t = input("何時間寝ますか>>")
+h.sleep(int(t))
+print("{}のHPは現在{}ですMPは{}です".format(h.name,h.hp,h.mp))
